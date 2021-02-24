@@ -1,5 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const babelRules = {
   test: /\.(js|jsx)$/,
@@ -14,8 +15,8 @@ const typeScriptRules = {
 };
 
 const cssRules = {
-  test: /\.css$/i,
-  use: ['style-loader', 'css-loader'],
+  test: /\.css$/,
+  use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
 };
 
 module.exports = {
@@ -30,8 +31,12 @@ module.exports = {
     extensions: ['.tsx', '.js', '.json'],
   },
   plugins: [
+    new MiniCssExtractPlugin({
+      filename: './src/assets/styles.css',
+      chunkFilename: 'styles.css',
+    }),
     new HtmlWebPackPlugin({
-      title: 'Portfolio',
+      title: 'swat neo',
       template: './public/index.html',
     }),
   ],

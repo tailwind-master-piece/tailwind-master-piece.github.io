@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
+import './assets/styles.css';
 
 const root = document.getElementById('root');
 
