@@ -35,4 +35,13 @@ describe('<Button />', () => {
       containerForExtraLargeRadius.querySelector('div.rounded-xl')
     ).toBeInTheDocument();
   });
+
+  it('should have respective color', () => {
+    const { container: redButton } = render(<Button color="red" />);
+    const { container: blueButton } = render(<Button color="blue" />);
+    const { container: pinkButton } = render(<Button color="pink" />);
+    expect(redButton.querySelector('div.bg-red-200')).toBeInTheDocument();
+    expect(blueButton.querySelector('div.bg-blue-200')).toBeInTheDocument();
+    expect(pinkButton.querySelector('div.bg-pink-200')).toBeInTheDocument();
+  });
 });
