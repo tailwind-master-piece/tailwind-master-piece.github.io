@@ -9,14 +9,16 @@ import { Colors, Size } from '../../types';
 interface Props {
   color?: Colors;
   size?: Size;
+  className?: string;
 }
 
 function Loader({
   color = 'text-black',
   size = 'text-base',
+  className,
 }: Props): JSX.Element {
   return (
-    <span>
+    <span className={className}>
       <RiLoader5Fill className={`inline-block animate-spin ${color} ${size}`} />
     </span>
   );
