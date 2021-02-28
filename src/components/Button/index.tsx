@@ -1,9 +1,9 @@
 import React, { ReactElement, useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
+import { backgroundColor, radius } from '../../types/index';
 
 interface buttonInterface {
-  radius?: string;
-  color?: string;
+  radius?: radius;
+  color?: backgroundColor;
   children: React.ReactNode;
 }
 
@@ -15,34 +15,11 @@ const Button: React.FC<buttonInterface> = ({
   const [className, setClassName] = useState<string>('button');
 
   useEffect(() => {
-    switch (radius) {
-      case 'sm':
-        setClassName((prevState) => prevState.concat(' rounded-sm'));
-        break;
-      case 'md':
-        setClassName((prevState) => prevState.concat(' rounded-md'));
-        break;
-      case 'lg':
-        setClassName((prevState) => prevState.concat(' rounded-lg'));
-        break;
-      case 'xl':
-        setClassName((prevState) => prevState.concat(' rounded-xl'));
-        break;
-    }
+    setClassName((prevState) => prevState.concat(` ${radius}`));
   }, []);
 
   useEffect(() => {
-    switch (color) {
-      case 'red':
-        setClassName((prevState) => prevState.concat(' bg-red-200'));
-        break;
-      case 'blue':
-        setClassName((prevState) => prevState.concat(' bg-blue-200'));
-        break;
-      case 'pink':
-        setClassName((prevState) => prevState.concat(' bg-pink-200'));
-        break;
-    }
+    setClassName((prevState) => prevState.concat(` ${color}`));
   }, []);
 
   return (
@@ -50,12 +27,6 @@ const Button: React.FC<buttonInterface> = ({
       {children}
     </div>
   );
-};
-
-Button.propTypes = {
-  radius: PropTypes.string,
-  color: PropTypes.string,
-  children: PropTypes.node,
 };
 
 export default Button;
