@@ -1,25 +1,26 @@
 import React, { ReactElement, useEffect, useState } from 'react';
-import { backgroundColor, radius } from '../../types/index';
+import { backgroundColor, radius, textColor } from '../../types/index';
 
 interface buttonInterface {
   radius?: radius;
   color?: backgroundColor;
   children: React.ReactNode;
+  textColor?: textColor;
 }
 
 const Button: React.FC<buttonInterface> = ({
   radius,
   color,
+  textColor,
   children,
 }): ReactElement => {
   const [className, setClassName] = useState<string>('button');
 
   useEffect(() => {
-    setClassName((prevState) => prevState.concat(` ${radius}`));
-  }, []);
-
-  useEffect(() => {
-    setClassName((prevState) => prevState.concat(` ${color}`));
+    if (radius) setClassName((prevState) => prevState.concat(` ${radius}`));
+    if (color) setClassName((prevState) => prevState.concat(` ${color}`));
+    if (textColor)
+      setClassName((prevState) => prevState.concat(` ${textColor}`));
   }, []);
 
   return (
