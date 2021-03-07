@@ -1,4 +1,5 @@
-import { render, screen } from '@testing-library/react';
+/* eslint-disable no-undef */
+import { render } from '@testing-library/react';
 import Divider from '../../components/Divider';
 
 describe('<Divider />', () => {
