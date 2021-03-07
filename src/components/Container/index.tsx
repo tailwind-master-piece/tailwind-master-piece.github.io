@@ -9,14 +9,14 @@ import {
 } from '../../types';
 
 interface containerInterface {
-  children: React.ReactNode;
-  center: boolean;
-  horizontalPadding: horizontalPadding;
-  verticalPadding: verticalPadding;
-  horizontalMargin: horizontalMargin;
-  verticalMargin: verticalMargin;
-  backgroundColor: backgroundColor;
-  textColor: textColor;
+  children?: React.ReactNode;
+  center?: boolean;
+  horizontalPadding?: horizontalPadding;
+  verticalPadding?: verticalPadding;
+  horizontalMargin?: horizontalMargin;
+  verticalMargin?: verticalMargin;
+  backgroundColor?: backgroundColor;
+  textColor?: textColor;
 }
 
 const Container: React.FC<containerInterface> = ({
