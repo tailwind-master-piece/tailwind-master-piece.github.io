@@ -9,39 +9,32 @@ describe('<Button />', () => {
     expect(container.querySelector('.button')).toBeInTheDocument();
   });
 
-  it('should have selected border radius class?', () => {
-    const { container: containerForSmallRadius } = render(
-      <Button radius="sm" />
-    );
-    const { container: containerForMediumRadius } = render(
-      <Button radius="md" />
-    );
-    const { container: containerForLargeRadius } = render(
-      <Button radius="lg" />
-    );
-    const { container: containerForExtraLargeRadius } = render(
-      <Button radius="xl" />
-    );
-    expect(
-      containerForSmallRadius.querySelector('div.rounded-sm')
-    ).toBeInTheDocument();
-    expect(
-      containerForMediumRadius.querySelector('div.rounded-md')
-    ).toBeInTheDocument();
-    expect(
-      containerForLargeRadius.querySelector('div.rounded-lg')
-    ).toBeInTheDocument();
-    expect(
-      containerForExtraLargeRadius.querySelector('div.rounded-xl')
-    ).toBeInTheDocument();
+  it('should render expected color', () => {
+    const { container } = render(<Button color="bg-green-800" />);
+    expect(container.querySelector('div.bg-green-800')).toBeInTheDocument();
   });
 
-  it('should have respective color', () => {
-    const { container: redButton } = render(<Button color="red" />);
-    const { container: blueButton } = render(<Button color="blue" />);
-    const { container: pinkButton } = render(<Button color="pink" />);
-    expect(redButton.querySelector('div.bg-red-200')).toBeInTheDocument();
-    expect(blueButton.querySelector('div.bg-blue-200')).toBeInTheDocument();
-    expect(pinkButton.querySelector('div.bg-pink-200')).toBeInTheDocument();
+  it('should render expected radius', () => {
+    const { container } = render(<Button radius="rounded-full" />);
+    expect(container.querySelector('div.rounded-full')).toBeInTheDocument();
+  });
+
+  it('should render expected textColor', () => {
+    const { container } = render(<Button textColor="text-gray-800" />);
+    expect(container.querySelector('div.text-gray-800')).toBeInTheDocument();
+  });
+
+  it('should render expected children', () => {
+    const expectedText = 'hey you';
+    const { container } = render(
+      <Button
+        radius="rounded-full"
+        color="bg-green-800"
+        textColor="text-gray-800"
+      >
+        hey you
+      </Button>
+    );
+    expect(container.textContent).toBe(expectedText);
   });
 });
