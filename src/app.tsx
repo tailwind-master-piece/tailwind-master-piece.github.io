@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { Loader, Button } from './components';
+import Input from './components/Input';
 
 function App(): JSX.Element {
   return (
