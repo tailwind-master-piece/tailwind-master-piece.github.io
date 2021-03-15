@@ -1,7 +1,7 @@
 {
-  "name": "work-portfolio",
+  "name": "platzi-master-tailwind-componets",
   "version": "2.0.0",
-  "description": "My work portfolio",
+  "description": "platzi-master-tailwind-componets",
   "main": "index.html",
   "scripts": {
     "save": "git add . && git commit",
