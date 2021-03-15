@@ -1,7 +1,7 @@
 {
   "name": "@pm/react-tailwind-components",
   "version": "2.0.0",
-  "description": "pm.tailwind-components",
+  "description": "platzi master react tailwind components",
   "main": "index.html",
   "scripts": {
     "save": "git add . && git commit",
