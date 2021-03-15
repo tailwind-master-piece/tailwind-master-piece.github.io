@@ -1,5 +1,5 @@
 {
-  "name": "platzimastertailwind",
+  "name": "@pm/react-tailwind-components",
   "version": "2.0.0",
   "description": "pm.tailwind-components",
   "main": "index.html",
