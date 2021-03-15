@@ -11,7 +11,7 @@ const babelRules = {
 
 const typeScriptRules = {
   test: /\.tsx?$/,
-  use: 'ts-loader',
+  use: 'babel-loader',
   exclude: /node_modules/,
 };
 
@@ -29,7 +29,7 @@ module.exports = {
     rules: [babelRules, typeScriptRules, cssRules],
   },
   resolve: {
-    extensions: ['.tsx', '.js', '.json'],
+    extensions: ['.tsx', '.js', '.json', '.ts'],
   },
   plugins: [
     new MiniCssExtractPlugin({
