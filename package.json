@@ -1,7 +1,7 @@
 {
-  "name": "platzi-master-tailwind-componets",
+  "name": "pm-tailwind-components",
   "version": "2.0.0",
-  "description": "platzi-master-tailwind-componets",
+  "description": "pm.tailwind-components",
   "main": "index.html",
   "scripts": {
     "save": "git add . && git commit",
