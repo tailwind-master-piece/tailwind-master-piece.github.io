@@ -27,9 +27,9 @@
     "babel"
   ],
   "bugs": {
-    "url": "https://github.com/BernardoAguayoOrtega/portfolio/issues"
+    "url": "https://github.com/tailwind-master-piece/tailwind-master-piece.github.io"
   },
-  "homepage": "https://github.com/BernardoAguayoOrtega/portfolio#readme",
+  "homepage": "https://github.com/tailwind-master-piece/tailwind-master-piece.github.io#readme",
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
