@@ -6,6 +6,5 @@ describe('<Input />', () => {
   it('Should render input component', () => {
     render(<Input name="test" />);
     expect(screen.getByTestId('input-test')).toBeInTheDocument();
-    screen.debug();
   });
 });
