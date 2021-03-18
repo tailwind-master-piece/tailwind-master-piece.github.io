@@ -1,17 +1,12 @@
-import Loader from './components/Loader';
-import Button from './components/Button';
+import Label from './components/Label';
 
 function App(): JSX.Element {
   return (
     <div className="p-4">
-      <Button
-        color="bg-red-900"
-        radius="rounded-full"
-        textColor="text-pink-400"
-      >
-        <Loader className="mr-2" color="text-indigo-600" size="text-lg" arrow />
-        Loading...
-      </Button>
+      <Label
+        text="28"
+        src="https://images.unsplash.com/photo-1616066959553-e13b2cfed557?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+      />
     </div>
   );
 }
