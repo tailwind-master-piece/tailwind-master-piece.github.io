@@ -1,7 +1,7 @@
 import { render } from 'react-dom';
 import './assets/styles.css';
-import App from './app';
+import { Landing } from './pages/Landing';
 
 const root = document.getElementById('root');
 
-render(<App />, root);
+render(<Landing />, root);

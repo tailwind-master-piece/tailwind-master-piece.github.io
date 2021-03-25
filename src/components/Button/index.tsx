@@ -24,7 +24,7 @@ const Button: React.FC<buttonInterface> = ({
   }, []);
 
   return (
-    <div title="button" className={className}>
+    <div title="button" className={className} style={{ cursor: 'pointer' }}>
       {children}
     </div>
   );

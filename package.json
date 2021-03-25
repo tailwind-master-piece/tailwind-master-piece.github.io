@@ -1,15 +1,16 @@
 {
-  "name": "work-portfolio",
-  "version": "2.0.0",
-  "description": "My work portfolio",
+  "name": "platzi-master-react-tailwind-components",
+  "version": "2.1.0",
+  "description": "platzi master react tailwind components",
   "main": "index.html",
   "scripts": {
+    "build": "webpack --config ./webpack.config.prod.js",
     "save": "git add . && git commit",
     "dev": "webpack-dev-server --open --config ./webpack.config.dev.js",
     "dev:hot": "webpack-dev-server --open --hot --config ./webpack.config.dev.js",
     "format": "pretty-quick",
     "lint": "eslint ./",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll=false",
     "coverage": "yarn test -- --coverage"
   },
   "author": "swat neo team",
@@ -27,9 +28,9 @@
     "babel"
   ],
   "bugs": {
-    "url": "https://github.com/BernardoAguayoOrtega/portfolio/issues"
+    "url": "https://github.com/tailwind-master-piece/tailwind-master-piece.github.io"
   },
-  "homepage": "https://github.com/BernardoAguayoOrtega/portfolio#readme",
+  "homepage": "https://github.com/tailwind-master-piece/tailwind-master-piece.github.io#readme",
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
