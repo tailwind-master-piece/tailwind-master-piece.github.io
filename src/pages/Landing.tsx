@@ -4,6 +4,7 @@ import './styles.css';
 import Button from '../components/Button/index';
 import Container from '../components/Container/index';
 import Divider from '../components/Divider/index';
+import Input from '../components/Input/index';
 
 export const Landing: React.FC = (): ReactElement => {
   return (
@@ -116,6 +117,23 @@ export const Landing: React.FC = (): ReactElement => {
               style="divide-solid"
               color="divide-purple-700"
             />
+          </div>
+        </div>
+        <div className="landing-container__component">
+          <h2>Input</h2>
+          <div className="landing-container__component__container buttons inputs">
+            <div>
+              <Input name="example 1" type="" />
+            </div>
+            <div>
+              <Input name="example 2" icon="left" />
+            </div>
+            <div>
+              <Input fluid={true} name="example 3" icon="pr-10 pl-4" />
+            </div>
+            <div>
+              <Input name="example 4" type="checkbox" />
+            </div>
           </div>
         </div>
       </div>
