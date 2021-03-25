@@ -4,6 +4,7 @@
   "description": "platzi master react tailwind components",
   "main": "index.html",
   "scripts": {
+    "build": "webpack --config ./webpack.config.prod.js",
     "save": "git add . && git commit",
     "dev": "webpack-dev-server --open --config ./webpack.config.dev.js",
     "dev:hot": "webpack-dev-server --open --hot --config ./webpack.config.dev.js",
